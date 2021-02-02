@@ -11,21 +11,21 @@ function Weather(props) {
               <thead>
                 <tr>
                   <th scope="col">Cidade</th>
-                  <th scope="col">Nevoeiro</th>
+                  <th scope="col">Nebulosidade (%)</th>
                   <th scope="col">País</th>
                   <th scope="col">DateTime</th>
-                  <th scope="col">Sensação Térmica</th>
-                  <th scope="col">Humidade</th>
+                  <th scope="col">Sensação Térmica (°C)</th>
+                  <th scope="col">Humidade (%)</th>
                   <th scope="col">ID</th>
-                  <th scope="col">Pressão</th>
-                  <th scope="col">Temperatura</th>
-                  <th scope="col">Temperatura MAX</th>
-                  <th scope="col">Temperatura MIN</th>
-                  <th scope="col">Visibilidade</th>
+                  <th scope="col">Pressão (hPa)</th>
+                  <th scope="col">Temperatura (°C)</th>
+                  <th scope="col">Temperatura MAX (°C)</th>
+                  <th scope="col">Temperatura MIN (°C)</th>
+                  <th scope="col">Visibilidade (KM)</th>
                   <th scope="col">Tempo</th>
                   <th scope="col">Ícone</th>
                   <th scope="col">Tempo Resumo</th>
-                  <th scope="col">Velocidade do Vento</th>
+                  <th scope="col">Velocidade do Vento (%m/s)</th>
                 </tr>
               </thead>
               <tbody>
