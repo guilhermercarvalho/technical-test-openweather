@@ -8,14 +8,14 @@ from .serealizer import WeatherSchema
 
 load_dotenv()
 
-OWM_BASE_URL = "http://api.openweathermap.org/data/2.5/weather"
+OWM_BASE_URL = "http://api.openweathermap.org/data/2.5/forecast"
 OWM_LANG = "pt_br"
 OWM_UNITS = "metric"
 OWM_KEY = getenv("OWM_KEY")
 
 params = {
     "lang": OWM_LANG,
-    "metrics": OWM_UNITS,
+    "units": OWM_UNITS,
     "appid": OWM_KEY
 }
 
@@ -63,20 +63,20 @@ def get_weather(city):
 
 
     return {
-        "city": res["name"],
-        "country": res["sys"]["country"],
-        "temp": res["main"]["temp"],
-        "temp_min": res["main"]["temp_min"],
-        "temp_max": res["main"]["temp_max"],
-        "feels_like": res["main"]["feels_like"],
-        "weather_main": res["weather"][0]["main"],
-        "weather_description": res["weather"][0]["description"],
-        "weather_icon": res["weather"][0]["icon"],
-        "pressure": res["main"]["pressure"],
-        "humidity": res["main"]["humidity"],
-        "visibility": res["visibility"],
-        "wind_speed": res["wind"]["speed"],
-        "cloudiness": res["clouds"]["all"]
+        "city": res["city"]["name"],
+        "country": res["city"]["country"],
+        "temp": res["list"][0]["main"]["temp"],
+        "temp_min": res["list"][0]["main"]["temp_min"],
+        "temp_max": res["list"][0]["main"]["temp_max"],
+        "feels_like": res["list"][0]["main"]["feels_like"],
+        "weather_main": res["list"][0]["weather"][0]["main"],
+        "weather_description": res["list"][0]["weather"][0]["description"],
+        "weather_icon": res["list"][0]["weather"][0]["icon"],
+        "pressure": res["list"][0]["main"]["pressure"],
+        "humidity": res["list"][0]["main"]["humidity"],
+        "visibility": res["list"][0]["visibility"],
+        "wind_speed": res["list"][0]["wind"]["speed"],
+        "cloudiness": res["list"][0]["clouds"]["all"]
     }
 
 
