@@ -16,7 +16,7 @@ function History(props) {
   const defineColumns = () => {
     return [
       { field: "city", headerName: "Cidade" },
-      { field: "cloudiness", headerName: "Nevoeiro" },
+      { field: "cloudiness", headerName: "Nebulosidade" },
       { field: "country", headerName: "País" },
       { field: "dt", headerName: "DateTime" },
       { field: "feels_like", headerName: "Sensação Térmica" },
